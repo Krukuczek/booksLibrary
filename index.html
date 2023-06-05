@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Books library</title>
+</head>
+<body>
+    <header>
+        <h1>Your own library</h1>
+    </header>
+    <main>
+        <input type="button" value="+ Add Book" id="addBook" onclick="openForm()">
+        <div id="bookContainer">
+        </div>
+    </main>
+    <footer><a href="">Krukuczek &COPY;</a></footer>
+    <div id="addBookForm">
+        <div id="bookFormContainer">
+            <div id="formHeading">
+                <h2>Add your book</h2>
+                <input type="button" value="X" onclick="closeForm()">
+            </div>
+            <form action="#" method="post" id="bookForm">
+                <label for="title">
+                    <span>Title: </span>
+                    <input type="text" id="title" name="title" required>
+                </label>
+                <label for="author">
+                    <span>Author: </span>
+                    <input type="text" id="author" name="author" required>
+                </label>
+                <label for="pages">
+                    <span>Pages: </span>
+                    <input type="number" id="pages" name="pages" required>
+                </label>
+                <label for="read" id="checkboxRead">
+                    <span>Read: </span>
+                    <input type="checkbox" id="read" name="read">
+                </label>
+                <input type="button" value="Submit" onclick="addBookToLibrary()" id="submitButton">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="script.js"></script>
