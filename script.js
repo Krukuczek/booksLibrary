@@ -1,10 +1,12 @@
 let myLibrary = [];
 
-function Book(title,author,pages,read){
-    this.title = title,
-    this.author = author,
-    this.pages = pages,
-    this.read = Boolean(read)
+class Book{
+    constructor(title,author,pages,read){
+        this.title = title,
+        this.author = author,
+        this.pages = pages,
+        this.read = Boolean(read)
+    }
 }
 function checkForm(title,author,pages){
     if(!title.value){
